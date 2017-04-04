@@ -19,9 +19,9 @@ def input_validation(fill):
 			else:
 				print('This place is not empty. Please enter an empty space:')	
 		else:
-			print('Out of range. Please enter 1~8: ')
+			print('Out of range.')
 	else:
-		print('Invalid input. Please enter an empty space:')
+		print('Invalid input. Please enter an empty space.')
 		return False
 
 # TODO: Check who wins the game
@@ -65,7 +65,7 @@ count = 0
 while count<9:
 	if count%2 == 0: # Player 1
 		while True:
-			fill = input('Player 1\'s turn. Please enter 0~8: ')
+			fill = input('Player 1\'s turn. Please enter 1~9: ')
 			if input_validation(fill):
 				board[int(fill)] = 'O'
 				check_result()
@@ -75,7 +75,7 @@ while count<9:
 
 	else: # Player 2
 		while True:
-			fill = input('Player 2\'s turn. Please enter 0~8: ')
+			fill = input('Player 2\'s turn. Please enter 1~9: ')
 			if input_validation(fill):
 				board[int(fill)] = 'X'
 				check_result()
